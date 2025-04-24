@@ -23,11 +23,21 @@ urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^admin/', admin.site.urls),
 ]
-"""
+
 from django.contrib import admin
 from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+"""
+from django.contrib import admin
+from django.urls import path
+from your_app import views
+
+urlpatterns = [
+    path('', views.home, name='home'),
+    path('admin/', admin.site.urls),
+]
+
 
