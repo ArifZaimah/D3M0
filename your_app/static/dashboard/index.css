@@ -1,0 +1,42 @@
+body {
+    background-color: #f8f9fa;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .wrapper {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    width: 220px;
+    background-color: #343a40;
+    color: white;
+    padding-top: 20px;
+    height: 100vh;
+    flex-shrink: 0;
+  }
+  
+  .sidebar h4 {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .sidebar a {
+    display: block;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+  }
+  
+  .sidebar a:hover {
+    background-color: #495057;
+  }
+  
+  .main-content {
+    background-color: #f8f9fa;
+    padding: 30px;
+    overflow-y: auto;
+  }
+  
