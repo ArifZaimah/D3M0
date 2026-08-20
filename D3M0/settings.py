@@ -36,7 +36,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+
+    'rest_framework',
+    'drf_spectacular',
     'your_app',
 ]
 
@@ -114,13 +116,23 @@ USE_TZ = True
 APPEND_SLASH = True
 
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
 
 # Default primary key field type
-# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Django REST Framework / OpenAPI
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'D3M0 API',
+    'DESCRIPTION': 'API documentation for the D3M0 dashboard.',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+}
